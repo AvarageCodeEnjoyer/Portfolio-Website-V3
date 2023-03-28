@@ -1,0 +1,37 @@
+$backgroundColor: #1F1F1F;
+$secondaryColor: #2D2D2D;
+$accentYellow: #FFB900;
+$accentPink: #FF2D55;
+
+.container {
+  height: 100vh;
+  display: grid;
+  background-color: $backgroundColor;
+}
+
+.hero {
+  width: 400px;
+  height: 400px;
+  justify-self: center;
+  align-self: center;
+  color: white;
+  font-size: 60px;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover:has(.fancy){
+      color: darken(#ffffff, 50%);
+    }
+  }
+}
+
+p {
+  margin: 0px;
+
+}

@@ -1,0 +1,15 @@
+$backgroundColor: #1F1F1F;
+$secondaryColor: #2D2D2D;
+$accentYellow: #FFB900;
+$accentPink: #FF2D55;
+
+body {
+  margin: 0px;
+  font-family: 'Space Mono', monospace;
+}
+
+nav {
+  display: flex;
+  height: 100px;
+  background-color: aqua;
+}

@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  font-family: "Space Mono", monospace;
+}
+
+nav {
+  display: flex;
+  height: 100px;
+  background-color: aqua;
+}/*# sourceMappingURL=CommonStyleSheet.css.map */
