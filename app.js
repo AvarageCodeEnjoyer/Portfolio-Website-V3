@@ -5,7 +5,7 @@
 const fancy = document.querySelectorAll('.fancy');
 const letters = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
 
-for (let element of fancy) {
+fancy.forEach( element => {
   element.addEventListener('mouseover', event => {
     let iterations = 0;
 
@@ -23,7 +23,6 @@ for (let element of fancy) {
       iterations += 1 / 2;
     }, 30);
   });
-}
-
+})
 
 

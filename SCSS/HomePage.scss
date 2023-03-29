@@ -25,13 +25,16 @@ $accentPink: #FF2D55;
   a {
     text-decoration: none;
     color: white;
-    &:hover:has(.fancy){
+    &:hover{
       color: darken(#ffffff, 50%);
     }
   }
 }
 
+.space {
+  justify-content: space-between;
+}
+
 p {
   margin: 0px;
-
 }

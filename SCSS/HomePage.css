@@ -22,10 +22,17 @@
   text-decoration: none;
   color: white;
 }
-.line a:hover:has(.fancy) {
+.line a:hover {
   color: gray;
+}
+
+.space {
+  justify-content: space-between;
 }
 
 p {
   margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=HomePage.css.map */
