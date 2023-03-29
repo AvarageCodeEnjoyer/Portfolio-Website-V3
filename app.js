@@ -1,28 +1,37 @@
+/* ------------ When you load a page make container slowly appear ----------- */
+const container = document.querySelector(".container")
 
+window.onload( () => {
+  for (let i = 0; i > 100; i++) {
+    container.style.opacity = i
+    console.log(i)
+  }
+})
 
 /* ------------------ Make hacker text effect for home page ----------------- */
 
 const fancy = document.querySelectorAll('.fancy');
-const letters = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUZWXYZabcdefghijklmnopqrstuvwxyz";
 
-fancy.forEach( element => {
-  element.addEventListener('mouseover', event => {
+fancy.forEach(element => {
+  element.addEventListener('mouseover', e => {
     let iterations = 0;
 
     const interval = setInterval(() => {
-      event.target.innerText = event.target.innerText.split("").map((letter, index) => {
+      e.target.innerText = e.target.innerText.split("").map((letter, index) => {
         if (index < iterations) {
-          return event.target.dataset.value[index];
+          return e.target.dataset.value[index];
         }
 
-        return letters[Math.floor(Math.random() * 26)];
+        return letters[Math.floor(Math.random() * 52)];
       }).join("");
 
-      if (iterations >= event.target.dataset.value.length) clearInterval(interval);
+      if (iterations >= e.target.dataset.value.length) clearInterval(interval);
 
-      iterations += 1 / 2;
+      iterations += 1 / 3;
     }, 30);
   });
 })
+
 
 

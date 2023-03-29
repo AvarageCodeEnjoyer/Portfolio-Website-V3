@@ -7,6 +7,7 @@ $accentPink: #FF2D55;
   height: 100vh;
   display: grid;
   background-color: $backgroundColor;
+  opacity: 0;
 }
 
 .hero {
@@ -22,12 +23,15 @@ $accentPink: #FF2D55;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
   a {
     text-decoration: none;
     color: white;
-    &:hover{
+  }
+  p {
+    &:has([class=".word"]){
       color: darken(#ffffff, 50%);
-    }
+    } 
   }
 }
 

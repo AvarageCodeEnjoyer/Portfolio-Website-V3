@@ -7,4 +7,10 @@ nav {
   display: flex;
   height: 100px;
   background-color: aqua;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  background-color: #1F1F1F;
 }/*# sourceMappingURL=CommonStyleSheet.css.map */

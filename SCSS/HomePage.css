@@ -2,6 +2,7 @@
   height: 100vh;
   display: grid;
   background-color: #1F1F1F;
+  opacity: 0;
 }
 
 .hero {
@@ -17,12 +18,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 .line a {
   text-decoration: none;
   color: white;
 }
-.line a:hover {
+.line p:has([class=".word"]) {
   color: gray;
 }
 
@@ -32,7 +34,4 @@
 
 p {
   margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }/*# sourceMappingURL=HomePage.css.map */
