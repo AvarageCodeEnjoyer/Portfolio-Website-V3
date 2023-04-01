@@ -13,3 +13,9 @@ nav {
   height: 100px;
   background-color: aqua;
 }
+
+.container {
+  height: 100vh;
+  display: grid;
+  background-color: $backgroundColor;
+}
