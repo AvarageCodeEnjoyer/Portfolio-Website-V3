@@ -3,6 +3,12 @@
   display: grid;
   background-color: #1F1F1F;
 }
+.container h2 {
+  color: white;
+  font-size: 70px;
+  justify-self: center;
+  align-self: flex-end;
+}
 
 .hero {
   width: 400px;
@@ -12,6 +18,9 @@
   color: white;
   font-size: 60px;
 }
+.hero:hover .word:not(:hover) {
+  opacity: 0.25;
+}
 
 .line {
   display: flex;
@@ -20,10 +29,15 @@
 }
 .line a {
   text-decoration: none;
-  color: white;
+  transition: 0.2s;
 }
-.line a:hover {
-  color: gray;
+
+.word {
+  transition: 0.2s;
+  opacity: 1;
+}
+.word:not(:hover) {
+  color: white;
 }
 
 .space {
@@ -32,7 +46,5 @@
 
 p {
   margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
 }/*# sourceMappingURL=HomePage.css.map */

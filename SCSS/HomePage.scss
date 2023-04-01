@@ -2,11 +2,18 @@ $backgroundColor: #1F1F1F;
 $secondaryColor: #2D2D2D;
 $accentYellow: #FFB900;
 $accentPink: #FF2D55;
+$transitionTime: 0.2s;
 
 .container {
   height: 100vh;
   display: grid;
   background-color: $backgroundColor;
+  h2 {
+    color: white;
+    font-size: 70px;
+    justify-self: center;
+    align-self: flex-end;
+  }
 }
 
 .hero {
@@ -16,6 +23,9 @@ $accentPink: #FF2D55;
   align-self: center;
   color: white;
   font-size: 60px;
+  &:hover .word:not(:hover) {
+    opacity: 0.25;
+  }
 }
 
 .line {
@@ -24,10 +34,15 @@ $accentPink: #FF2D55;
   flex-wrap: wrap;
   a {
     text-decoration: none;
+    transition: $transitionTime;
+  }
+}
+
+.word {
+  transition: $transitionTime;
+  opacity: 1;
+  &:not(:hover) {
     color: white;
-    &:hover{
-      color: darken(#ffffff, 50%);
-    }
   }
 }
 
@@ -37,4 +52,5 @@ $accentPink: #FF2D55;
 
 p {
   margin: 0px;
+  color: white;
 }
