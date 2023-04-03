@@ -43,7 +43,7 @@
   translate: -15px -15px;
 }
 #box-wrapper .slide-in:nth-child(odd):hover {
-  box-shadow: 10px 10px 13px #bebebe, 25px 25px 20px #4e10ca;
+  box-shadow: 13px 13px 13px #bebebe, 25px 25px 25px #4e10ca;
 }
 #box-wrapper .slide-in:nth-child(even) {
   transform: translateX(0);
@@ -66,6 +66,13 @@
   margin: 50px 50px;
   transition: 1s;
   opacity: 0;
+}
+.boxes a {
+  color: #bebebe;
+  transition: 0.4s;
+}
+.boxes a:hover {
+  color: white;
 }
 .boxes .textBox {
   display: grid;

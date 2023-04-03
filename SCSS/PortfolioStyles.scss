@@ -1,8 +1,4 @@
-$backgroundColor: #1F1F1F;
-$secondaryColor: #2D2D2D;
-$accentPurple: #4e10ca;
-$accentWhite: #bebebe;
-$transitionTime: 0.4s;
+@import "Variables";
 
 .container {
   display: grid;
@@ -43,12 +39,13 @@ $transitionTime: 0.4s;
   }
   .slide-in { 
     opacity: 1;
+    // transition: $transitionTime;
     &:nth-child(odd) {
       transform: translateX(0);
       box-shadow: 10px 10px 10px $accentWhite, 20px 20px 20px $accentPurple;
       translate: -15px -15px;
       &:hover {
-        box-shadow: 10px 10px 13px $accentWhite, 25px 25px 20px $accentPurple;
+        box-shadow: 13px 13px 13px $accentWhite, 25px 25px 25px $accentPurple;
       }
     }
     &:nth-child(even) {
@@ -75,6 +72,13 @@ $transitionTime: 0.4s;
   margin: 50px 50px;
   transition: calc($transitionTime * 2.5);
   opacity: 0;
+  a {
+    color: $accentWhite;
+    transition: $transitionTime;
+    &:hover {
+      color: white;
+    }
+  }
   .textBox { 
     display: grid;
     justify-content: center;
