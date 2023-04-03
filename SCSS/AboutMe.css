@@ -1,1 +1,54 @@
-/*# sourceMappingURL=AboutMe.css.map */
+.aboutMeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.aboutMeContainer .insideAboutMe {
+  display: grid;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #2D2D2D;
+  width: 75%;
+  height: 700px;
+  font-size: 30px;
+  border-radius: 10px;
+  grid-template-rows: repeat(6, 100px);
+  /* ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: none;
+    margin: none;
+    b {
+      padding: none;
+    margin: none;
+
+    }
+    li {
+
+    }
+  } */
+  /*  &:nth-child(3) {
+     // width: 80%;
+
+   } */
+}
+.aboutMeContainer .insideAboutMe h2 {
+  justify-self: center;
+}
+.aboutMeContainer .insideAboutMe h3 {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.aboutMeContainer .insideAboutMe h3:hover:before {
+  border-left: 2px solid black;
+}
+.aboutMeContainer .insideAboutMe h3 span:nth-child(1) {
+  justify-self: start;
+}
+.aboutMeContainer .insideAboutMe h3 span:nth-child(2) {
+  justify-self: end;
+}/*# sourceMappingURL=AboutMe.css.map */
