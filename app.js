@@ -1,5 +1,5 @@
 /* ------------ When you load a page make container slowly appear ----------- */
-const lineText = document.querySelector(".line")
+const lineText = document.getElementsByClassName("line")
 const button = document.getElementById('button')
 // lineText.forEach(element => element.addEventListener())
 
@@ -12,15 +12,23 @@ let textLoadIn = setInterval(() => {
     i++
     if (i >= 100) clearInterval(textLoadIn)
     console.log(i)
-  }, 50)
+  }, 100)
 }
 // })
 
+/* -------------------------------------------------------------------------- */
+/*                    Jquery for sliding in portfolio boxes                   */
+/* -------------------------------------------------------------------------- */
 
-/* ------------------ Make hacker text effect for home page ----------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                    Make hacker text effect for home page                   */
+/* -------------------------------------------------------------------------- */
 
 const fancy = document.querySelectorAll('.fancy');
-const letters = "ABCDEFGHIJKLMNOPQRSTUZWXYZabcdefghijklmnopqrstuvwxyz";
+const letters = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
 
 fancy.forEach(element => {
   element.addEventListener('mouseover', e => {
@@ -32,15 +40,17 @@ fancy.forEach(element => {
           return e.target.dataset.value[index];
         }
 
-        return letters[Math.floor(Math.random() * 52)];
+        return letters[Math.floor(Math.random() * 26)];
       }).join("");
 
       if (iterations >= e.target.dataset.value.length) clearInterval(interval);
 
-      iterations += 1 / 3;
+      iterations += 1 / 2;
     }, 30);
   });
 })
+
+
 
 
 
