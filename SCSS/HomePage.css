@@ -1,17 +1,13 @@
-.container {
-  height: 100vh;
-  display: grid;
-  background-color: #1F1F1F;
-  opacity: 0;
-}
-
-.hero {
+.header {
   width: 400px;
   height: 400px;
-  justify-self: center;
-  align-self: center;
-  color: white;
-  font-size: 60px;
+  transition: 2s;
+}
+.header transform from {
+  opacity: 0;
+}
+.header transform to {
+  opacity: 1;
 }
 
 .line {

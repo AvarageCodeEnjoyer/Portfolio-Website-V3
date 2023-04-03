@@ -6,16 +6,36 @@ $accentPink: #FF2D55;
 body {
   margin: 0px;
   font-family: 'Space Mono', monospace;
+  color: white;
 }
 
 nav {
-  display: flex;
-  height: 100px;
-  background-color: aqua;
+  height: 150px;
+  ul {
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    li {
+      padding: 0px;
+
+    }
+  }
+}
+
+
+.header {
+  width: fit-content;
+  justify-self: center;
+  // color: white;
+  font-size: 60px;
+  font-weight: 400;
 }
 
 .container {
-  height: 100vh;
   display: grid;
+  height: 100%;
+  min-height: 100vh;
   background-color: $backgroundColor;
 }

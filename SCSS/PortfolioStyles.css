@@ -1,1 +1,50 @@
-/*# sourceMappingURL=PortfolioStyles.css.map */
+.container {
+  display: grid;
+  justify-content: center;
+}
+
+/* h1 + p{
+  color: red;
+  justify-self: center;
+  width: 75%; 
+}
+ */
+#box-wrapper {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boxes {
+  display: flex;
+  width: 45%;
+  justify-self: center;
+  background-color: #2D2D2D;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  transition: 0.5s;
+}
+.boxes:hover:nth-child(odd) {
+  box-shadow: 10px 10px #FF2D55, 20px 20px #FFB900;
+  translate: -15px -15px;
+}
+.boxes:hover:nth-child(even) {
+  box-shadow: -10px 10px #FF2D55, -20px 20px #FFB900;
+  translate: 15px -15px;
+}
+.boxes p {
+  padding: 20px;
+  font-size: 23px;
+}
+.boxes img {
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  border: 10px solid #2D2D2D;
+  transition: 0.3s;
+}
+.boxes img:hover {
+  border: 10px solid #FFB900;
+}/*# sourceMappingURL=PortfolioStyles.css.map */

@@ -1,12 +1,21 @@
 /* ------------ When you load a page make container slowly appear ----------- */
-const container = document.querySelector(".container")
+const lineText = document.querySelector(".line")
+const button = document.getElementById('button')
+// lineText.forEach(element => element.addEventListener())
 
-window.onload( () => {
-  for (let i = 0; i > 100; i++) {
-    container.style.opacity = i
+// button.addEventListener('click', e => {
+function load() {
+let i = 0
+
+let textLoadIn = setInterval(() => {
+    lineText.style.opacity = i
+    i++
+    if (i >= 100) clearInterval(textLoadIn)
     console.log(i)
-  }
-})
+  }, 50)
+}
+// })
+
 
 /* ------------------ Make hacker text effect for home page ----------------- */
 
