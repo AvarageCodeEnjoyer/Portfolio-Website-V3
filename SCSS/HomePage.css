@@ -11,11 +11,14 @@
 }
 
 .hero {
-  width: 400px;
-  height: 400px;
+  display: grid;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 300px;
   justify-self: center;
   align-self: center;
   color: white;
+  justify-items: space-between;
   font-size: 60px;
 }
 .hero:hover .word:not(:hover) {
@@ -26,7 +29,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  height: 50px;
 }
 .line a {
   text-decoration: none;
@@ -39,10 +42,6 @@
 }
 .word:not(:hover) {
   color: white;
-}
-
-.space {
-  justify-content: space-between;
 }
 
 p {
