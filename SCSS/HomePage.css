@@ -1,13 +1,25 @@
-.header {
+.container {
+  height: 100vh;
+  display: grid;
+  background-color: #1F1F1F;
+}
+.container h2 {
+  color: white;
+  font-size: 70px;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.hero {
   width: 400px;
   height: 400px;
-  transition: 2s;
+  justify-self: center;
+  align-self: center;
+  color: white;
+  font-size: 60px;
 }
-.header transform from {
-  opacity: 0;
-}
-.header transform to {
-  opacity: 1;
+.hero:hover .word:not(:hover) {
+  opacity: 0.25;
 }
 
 .line {
@@ -18,10 +30,15 @@
 }
 .line a {
   text-decoration: none;
-  color: white;
+  transition: 0.2s;
 }
-.line p:has([class=".word"]) {
-  color: gray;
+
+.word {
+  transition: 0.2s;
+  opacity: 1;
+}
+.word:not(:hover) {
+  color: white;
 }
 
 .space {
@@ -30,4 +47,5 @@
 
 p {
   margin: 0px;
+  color: white;
 }/*# sourceMappingURL=HomePage.css.map */

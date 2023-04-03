@@ -2,15 +2,30 @@ $backgroundColor: #1F1F1F;
 $secondaryColor: #2D2D2D;
 $accentYellow: #FFB900;
 $accentPink: #FF2D55;
+$transitionTime: 0.2s;
 
-.header {
+.container {
+  height: 100vh;
+  display: grid;
+  background-color: $backgroundColor;
+  h2 {
+    color: white;
+    font-size: 70px;
+    justify-self: center;
+    align-self: flex-end;
+  }
+}
+
+.hero {
   width: 400px;
   height: 400px;
-  transition: 2s;
-  transform{
-    from{opacity: 0};
-    to{opacity: 1};
-  };
+  justify-self: center;
+  align-self: center;
+  color: white;
+  font-size: 60px;
+  &:hover .word:not(:hover) {
+    opacity: 0.25;
+  }
 }
 
 .line {
@@ -20,12 +35,15 @@ $accentPink: #FF2D55;
   margin-bottom: 50px;
   a {
     text-decoration: none;
-    color: white;
+    transition: $transitionTime;
   }
-  p {
-    &:has([class=".word"]){
-      color: darken(#ffffff, 50%);
-    } 
+}
+
+.word {
+  transition: $transitionTime;
+  opacity: 1;
+  &:not(:hover) {
+    color: white;
   }
 }
 
@@ -35,4 +53,5 @@ $accentPink: #FF2D55;
 
 p {
   margin: 0px;
+  color: white;
 }
