@@ -3,7 +3,6 @@ const lineText = document.getElementsByClassName("line")
 const button = document.getElementById('button')
 // lineText.forEach(element => element.addEventListener())
 
-// button.addEventListener('click', e => {
 function load() {
 let i = 0
 
@@ -14,14 +13,6 @@ let textLoadIn = setInterval(() => {
     console.log(i)
   }, 100)
 }
-// })
-
-/* -------------------------------------------------------------------------- */
-/*                    Jquery for sliding in portfolio boxes                   */
-/* -------------------------------------------------------------------------- */
-
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                    Make hacker text effect for home page                   */
