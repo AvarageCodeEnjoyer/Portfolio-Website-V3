@@ -1,41 +1,92 @@
 $backgroundColor: #1F1F1F;
 $secondaryColor: #2D2D2D;
-$accentYellow: #FFB900;
-$accentPink: #FF2D55;
+$accentPurple: #4e10ca;
+$accentWhite: #bebebe;
+$transitionTime: 0.4s;
 
 .container {
   display: grid;
   justify-content: center;
+  overflow: hidden;
 }
 
-/* h1 + p{
-  color: red;
+/* ---------------- First text thats displayed on the screen ---------------- */
+
+.intro {
+  display: grid;
   justify-self: center;
-  width: 75%; 
+  width: 75%;
+  p {
+    margin: 20px;
+    justify-self: center;
+    background-color: $secondaryColor;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: calc($transitionTime * 2.5);
+    &:hover {
+      box-shadow: inset 0 0 20px 1px $accentWhite, 0 0 20px 7px $accentPurple;
+    }
+  }
 }
- */
+
+/* ------------ Div that wraps all the boxes with images and text ----------- */
+
 #box-wrapper {
   display: grid;
   justify-content: center;
+  position: relative;
   gap: 20px;
+  .active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .slide-in { 
+    opacity: 1;
+    &:nth-child(odd) {
+      transform: translateX(0);
+      box-shadow: 10px 10px 10px $accentWhite, 20px 20px 20px $accentPurple;
+      translate: -15px -15px;
+      &:hover {
+        box-shadow: 10px 10px 13px $accentWhite, 25px 25px 20px $accentPurple;
+      }
+    }
+    &:nth-child(even) {
+      transform: translateX(0);
+      box-shadow: -10px 10px 10px $accentWhite, -20px 20px 20px $accentPurple;
+      translate: 15px -15px;
+      &:hover {
+        box-shadow: -10px 10px 13px rgb(185, 185, 185), -25px 25px 20px $accentPurple;
+      }
+    }
+  }
 }
+
+/* ---------- Styles for all the boxes that contain images and text --------- */
 
 .boxes {
   display: flex;
-  width: 45%;
   justify-self: center;
+  width: 50%;
+  box-sizing: border-box;
   background-color: $secondaryColor;
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 100px;
-  transition: 0.5s;
-  &:hover:nth-child(odd) {
-    box-shadow: 10px 10px $accentPink, 20px 20px $accentYellow;
-    translate: -15px -15px;
+  margin: 50px 50px;
+  transition: calc($transitionTime * 2.5);
+  opacity: 0;
+  .textBox { 
+    display: grid;
+    justify-content: center;
+    h1 {
+      text-align: center;
+    }
   }
-  &:hover:nth-child(even) {
-    box-shadow: -10px 10px $accentPink, -20px 20px $accentYellow;
-    translate: 15px -15px;
+  &:nth-child(odd) {
+    transform: translateX(100%) 
+  }
+  &:nth-child(even) {
+    transform: translateX(-100%) 
   }
   p {
     padding: 20px;
@@ -44,12 +95,15 @@ $accentPink: #FF2D55;
   img {
     box-sizing: border-box;
     border-radius: 10px;
-    width: 300px;
-    height: 300px;
-    border: 10px solid $secondaryColor;
-    transition: 0.3s;
+    width: 350px;
+    height: 350px;
+    border: 10px double  $secondaryColor;
+    transition: $transitionTime;
     &:hover {
-      border: 10px solid #FFB900;
+      border: 15px double lighten($accentPurple, 30%);
     }
   }
 }
+
+
+

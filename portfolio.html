@@ -7,9 +7,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cd385a218c.js" crossorigin="anonymous"></script>	
   <link href="./SCSS/CommonStyleSheet.css" rel="StyleSheet">
   <link href="./SCSS/portfolioStyles.css" rel="StyleSheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="./app.js"></script>
+  <script>
+    $(document).ready(function() {
+      let boxes = $(".boxes");
+      $(window).on("scroll", function() {
+        let scrollTop = $(this).scrollTop();
+        
+        boxes.each(function() {
+          let box = $(this);
+          let boxTop = box.offset().top;
+          let windowHeight = $(window).height();
+          console.log(windowHeight)
+          
+          if (scrollTop > boxTop - windowHeight + 350) {
+            box.addClass("active");
+            setTimeout(function() {
+              box.addClass("slide-in");
+            }, 500);
+          }
+        });
+      });
+      
+      $(window).trigger("scroll");
+    });  
+  </script>
   <title>Niko's Portfolio Page</title>
 </head>
 <body>
@@ -17,74 +43,162 @@
     <nav>
       <ul>
         <!-- <li><h1 class="header fancy" data-value="Home">Home</h1></li> -->
-        <li><h1 class="header fancy" data-value="Portfolio">Portfolio</h1></li>
+        <li><h1 class="header fancy" data-value="PORTFOLIO">PORTFOLIO</h1></li>
         <!-- <li><h1 class="header fancy" data-value="About Me">About Me</h1></li> -->
       </ul>
     </nav>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet aliquam illum eligendi expedita architecto commodi animi tenetur! Maxime quae qui repellat illo, eveniet nemo, iure id assumenda, similique sapiente expedita.</p>
+    <div class="intro">
+      <p>Hi there! My name is Niko Drossos, and I'm a front-end developer with a passion for creating beautiful, functional websites.
+      My journey as a web developer began with learning HTML and CSS, and I quickly fell in love with the power of these languages to transform ideas into fully-realized web designs.</p>
+      <p>In my portfolio, you'll find a selection of my favorite projects from my time as a front-end developer. Each project showcases my approach to web design and development, from the early stages of wireframing and prototyping to the final touches of polished CSS animations and responsive layouts.</p>
+    </div>
+
     <div id="box-wrapper">
       <div class="boxes">
-        <a href=""><img src="./Images/Stock Photo.jpg" alt=""></a>
-        <p>
-          Lorem ipsum dolor  elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
+        <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+        <div class="textBox">
+          <h1>Hello & Welcome</h1>
+          <p>
+            Lorem ipsum dolor blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+          </p> 
+        </div>
       </div>
       
       <div class="boxes">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
-        <img src="./Images/Stock Photo.jpg" alt="">
+        <div class="textBox">
+          <h1>Hello & Welcome</h1>
+          <p>
+            Lorem ipsum  Itaque sunt dolorum fugiat  obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+          </p>
+        </div>
+        <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+      </div>
+    
+    <div id="box-wrapper">
+      <div class="boxes">
+        <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+        <div class="textBox">
+          <h1>Hello & Welcome</h1>
+          <p>
+            Lorem ipsum dolor blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+          </p> 
+        </div>
       </div>
       
       <div class="boxes">
-        <img src="./Images/Stock Photo.jpg" alt="">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
+        <div class="textBox">
+          <h1>Hello & Welcome</h1>
+          <p>
+            Lorem ipsum  Itaque sunt dolorum fugiat  obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+          </p>
+        </div>
+        <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
       </div>
-      
-      <div class="boxes">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
-        <img src="./Images/Stock Photo.jpg" alt="">
-      </div>
-      
-      
-      <div class="boxes">
-        <img src="./Images/Stock Photo.jpg" alt="">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
-      </div>
-      
-      
-      <div class="boxes">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
-        <img src="./Images/Stock Photo.jpg" alt="">
-      </div>
-      
-      
-      <div class="boxes">
-        <img src="./Images/Stock Photo.jpg" alt="">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
-      </div>
-      
-      
-      <div class="boxes">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt dolorum fugiat adipisci blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
-        </p>
-        <img src="./Images/Stock Photo.jpg" alt="">
-      </div>
-      
+    
+      <div id="box-wrapper">
+        <div class="boxes">
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum dolor blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p> 
+          </div>
+        </div>
+        
+        <div class="boxes">
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum  Itaque sunt dolorum fugiat  obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p>
+          </div>
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+        </div>
+
+        <div class="boxes">
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum dolor blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p> 
+          </div>
+        </div>
+        
+        <div class="boxes">
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum  Itaque sunt dolorum fugiat  obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p>
+          </div>
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+        </div>
+
+        <div class="boxes">
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum dolor blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p> 
+          </div>
+        </div>
+        
+        <div class="boxes">
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum  Itaque sunt dolorum fugiat  obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p>
+          </div>
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+        </div>
+        
+        <div class="boxes">
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum dolor blanditiis suscipit obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p> 
+          </div>
+        </div>
+        
+        <div class="boxes">
+          <div class="textBox">
+            <h1>Hello & Welcome</h1>
+            <p>
+              Lorem ipsum  Itaque sunt dolorum fugiat  obcaecati, nemo autem eius, enim, aliquam architecto ducimus nostrum laudantium possimus rerum optio omnis. Sunt.
+            </p>
+          </div>
+          <a href="" target="_blank"><img src="./Images/Stock Photo.jpg" alt=""></a>
+        </div>            
     </div>
   </div>
-  <footer></footer>
+  <footer>
+		<div>
+			<h4>Contact Me</h4>
+			<p>18149 W Estes Way<br>Goodyear, AZ 85338<br>Phone: 719-726-6022<br>Email: Droniko777@gmail.com</p>
+		</div>
+		<div>
+			<ul id="icons">
+				<li><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
+				<li><a href="" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitch fa-3x"></i></a></li>
+			</ul>
+			<br>
+			<p>&copy; 2023 Beth Kavod Company. All rights reserved.</p>
+		</div>
+		<div>
+			<ul>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Sitemap</a></li>
+				<li><a href="#">Accessibility Statement</a></li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
