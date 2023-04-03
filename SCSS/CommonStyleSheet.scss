@@ -2,11 +2,19 @@ $backgroundColor: #1F1F1F;
 $secondaryColor: #2D2D2D;
 $accentYellow: #FFB900;
 $accentPink: #FF2D55;
+$transitionTime: 0.2s;
 
 body {
   margin: 0px;
   font-family: 'Space Mono', monospace;
   color: white;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  min-height: 100vh;
+  background-color: $backgroundColor;
 }
 
 nav {
@@ -24,7 +32,6 @@ nav {
   }
 }
 
-
 .header {
   width: fit-content;
   justify-self: center;
@@ -33,9 +40,44 @@ nav {
   font-weight: 400;
 }
 
-.container {
-  display: grid;
-  height: 100%;
-  min-height: 100vh;
-  background-color: $backgroundColor;
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  background-color: #111111;
+  ul {
+    list-style-type: none;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  #icons{
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    i {
+      color:#FFFFFF;
+      transition: $transitionTime;
+      &:hover {
+        color: #d5d5d5;
+      }
+    }
+  }
 }
+
+
+@media screen and (max-width: 1200px) {
+  .boxes {
+    flex-direction: column;
+    
+    a {
+      display: grid;
+      img {
+        justify-self: center;
+      }
+    }
+  }
+}
+
