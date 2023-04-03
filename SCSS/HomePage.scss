@@ -1,19 +1,8 @@
-$backgroundColor: #1F1F1F;
-$secondaryColor: #2D2D2D;
-$accentYellow: #FFB900;
-$accentPink: #FF2D55;
-$transitionTime: 0.2s;
+@import "Variables";
 
 .container {
-  height: 100vh;
-  display: grid;
   background-color: $backgroundColor;
-  h2 {
-    color: white;
-    font-size: 70px;
-    justify-self: center;
-    align-self: flex-end;
-  }
+  align-items: center;
 }
 
 .hero {
@@ -21,9 +10,8 @@ $transitionTime: 0.2s;
   width: fit-content;
   height: 300px;
   justify-self: center;
-  align-self: center;
+  align-items: space-between;
   color: white;
-  justify-items: space-between;
   font-size: 60px;
   &:hover .word:not(:hover) {
     opacity: 0.25;
@@ -33,7 +21,6 @@ $transitionTime: 0.2s;
 .line {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   height: 50px;
   a {
     text-decoration: none;

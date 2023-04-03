@@ -2,7 +2,7 @@ $backgroundColor: #1F1F1F;
 $secondaryColor: #2D2D2D;
 $accentYellow: #FFB900;
 $accentPink: #FF2D55;
-$transitionTime: 0.2s;
+$transitionTime: 0.4s;
 
 body {
   margin: 0px;
@@ -15,6 +15,9 @@ body {
   height: 100%;
   min-height: 100vh;
   background-color: $backgroundColor;
+  > h2 {
+    
+  }
 }
 
 nav {
@@ -27,7 +30,6 @@ nav {
     list-style: none;
     li {
       padding: 0px;
-
     }
   }
 }
@@ -35,9 +37,9 @@ nav {
 .header {
   width: fit-content;
   justify-self: center;
-  // color: white;
-  font-size: 60px;
   font-weight: 400;
+  color: white;
+  font-size: 70px;
 }
 
 footer {
@@ -46,6 +48,7 @@ footer {
   align-items: center;
   height: 200px;
   background-color: #111111;
+  color: #dbdbdb;
   ul {
     list-style-type: none;
     a {
@@ -58,10 +61,13 @@ footer {
     display: flex;
     justify-content: space-around;
     i {
-      color:#FFFFFF;
-      transition: $transitionTime;
+      // color:#FFFFFF;
+      color: #d5d5d5;
+
+      transition: $transitionTime / 2;
       &:hover {
-        color: #d5d5d5;
+        color: white
+        // color: #d5d5d5;
       }
     }
   }

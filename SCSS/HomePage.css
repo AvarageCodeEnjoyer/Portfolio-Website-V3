@@ -1,13 +1,6 @@
 .container {
-  height: 100vh;
-  display: grid;
   background-color: #1F1F1F;
-}
-.container h2 {
-  color: white;
-  font-size: 70px;
-  justify-self: center;
-  align-self: flex-end;
+  align-items: center;
 }
 
 .hero {
@@ -16,9 +9,8 @@
   width: fit-content;
   height: 300px;
   justify-self: center;
-  align-self: center;
+  align-items: space-between;
   color: white;
-  justify-items: space-between;
   font-size: 60px;
 }
 .hero:hover .word:not(:hover) {
@@ -28,16 +20,15 @@
 .line {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   height: 50px;
 }
 .line a {
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .word {
-  transition: 0.2s;
+  transition: 0.4s;
   opacity: 1;
 }
 .word:not(:hover) {
