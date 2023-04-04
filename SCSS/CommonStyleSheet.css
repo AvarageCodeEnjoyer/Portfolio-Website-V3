@@ -10,18 +10,34 @@ body {
   min-height: 100vh;
   background-color: #1F1F1F;
 }
+
 nav {
   height: 150px;
+  padding-bottom: 80px;
+}
+nav .header {
+  transition: 0.4s;
 }
 nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 0px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
+}
+nav ul:hover .active:not(:hover) {
+  opacity: 0.4;
+}
+nav ul .inactive {
+  opacity: 0.4;
+}
+nav ul .inactive:hover {
+  opacity: 1;
 }
 nav ul li {
-  padding: 0px;
+  display: grid;
+  justify-content: center;
+}
+nav ul li a {
+  text-decoration: none;
 }
 
 .header {
@@ -45,8 +61,11 @@ footer ul {
   list-style-type: none;
 }
 footer ul a {
-  color: white;
+  color: #dbdbdb;
   text-decoration: none;
+}
+footer ul a:hover {
+  color: white;
 }
 footer #icons {
   padding: 0px;
