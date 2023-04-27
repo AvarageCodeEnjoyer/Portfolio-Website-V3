@@ -1,5 +1,4 @@
 .container {
-  background-color: #1F1F1F;
   align-items: center;
 }
 
@@ -25,6 +24,7 @@
 .line a {
   text-decoration: none;
   transition: 0.4s;
+  text-shadow: 3px 2px #2D2D2D;
 }
 
 .word {

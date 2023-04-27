@@ -17,10 +17,6 @@
   font-size: 25px;
   padding: 20px;
   border-radius: 10px;
-  transition: 1s;
-}
-.intro p:hover {
-  box-shadow: inset 0 0 20px 1px #bebebe, 0 0 20px 7px #4e10ca;
 }
 
 /* ------------ Div that wraps all the boxes with images and text ----------- */
@@ -38,20 +34,20 @@
   opacity: 1;
 }
 #box-wrapper .slide-in:nth-child(odd) {
-  transform: translateX(0);
-  box-shadow: 10px 10px 10px #bebebe, 20px 20px 20px #4e10ca;
+  transform: translateX(15px);
+  box-shadow: 10px 10px 10px #bebebe, 20px 20px 20px #33dddd;
   translate: -15px -15px;
 }
 #box-wrapper .slide-in:nth-child(odd):hover {
-  box-shadow: 13px 13px 13px #bebebe, 25px 25px 25px #4e10ca;
+  box-shadow: 13px 13px 13px #bebebe, 25px 25px 25px #33dddd;
 }
 #box-wrapper .slide-in:nth-child(even) {
-  transform: translateX(0);
-  box-shadow: -10px 10px 10px #bebebe, -20px 20px 20px #4e10ca;
+  transform: translateX(-15px);
+  box-shadow: -10px 10px 10px #bebebe, -20px 20px 20px #33dddd;
   translate: 15px -15px;
 }
 #box-wrapper .slide-in:nth-child(even):hover {
-  box-shadow: -10px 10px 13px rgb(185, 185, 185), -25px 25px 20px #4e10ca;
+  box-shadow: -10px 10px 13px rgb(185, 185, 185), -25px 25px 20px #33dddd;
 }
 
 /* ---------- Styles for all the boxes that contain images and text --------- */
@@ -100,5 +96,19 @@
   transition: 0.4s;
 }
 .boxes img:hover {
-  border: 15px double #a67ef5;
+  border: 15px double #52e2e2;
+}
+
+@media screen and (max-width: 775px) {
+  .boxes img {
+    width: 90%;
+    height: auto;
+    border: none;
+  }
+  .boxes img:hover {
+    border: none;
+  }
+  .boxes:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
 }/*# sourceMappingURL=PortfolioStyles.css.map */

@@ -1,38 +1,75 @@
 @import "Variables";
 
+@keyframes border {
+  from {box-shadow: none;}
+  to {box-shadow: inset 0 0 15px 1px $accentWhite, 0 0 15px 7px $accentCopper}
+}
+
+canvas {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
 .aboutMeContainer {
   display: grid;
   // height: 200px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  .insideAboutMe {
+  > div {
+    background-color: $secondaryColor;
+    justify-self: center;
+    border-radius: 10px;
+    margin-bottom: 100px;
+  }
+  .monologue, .insideAboutMe {
     display: grid;
     justify-self: center;
     justify-content: center;
-    align-items: center;
-    background-color: $secondaryColor;
-    width: 75%;
-    height: 700px;
-    font-size: 30px;   
-    border-radius: 10px;
-    grid-template-rows: repeat(5, 100px);
-
+    transition: calc($transitionTime * 2.5);
+    animation: border calc($transitionTime * 2.5) ease-in 1 forwards;
+    &:hover {
+      box-shadow: inset 0 0 20px 1px $accentWhite, 0 0 20px 7px $accentCopper;
+    }
     h2 {
       justify-self: center;
     }
+  }
+  .monologue {
+    grid-template-columns: auto 1fr;
+    grid-area: 1 / 1 / 2 / 3;
+    width: 80%;
+    justify-self: center;
+    font-size: 25px;
+    padding: 20px;
+    img {
+      width: 400px;
+    }
+    p {
+      width: 90%;
+      justify-self: center;
+    }
+  }
+  .insideAboutMe {
+    align-items: center;
+    width: 75%;
+    height: 700px;
+    font-size: 30px;   
+    grid-template-rows: repeat(6, 100px);
     h3 {
       display: grid;
       justify-content: space-between;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      &:hover {
-        &:before {
+      box-sizing: border-box;
+      border: 10px solid $secondaryColor;
+      &:hover{
 
-          border-left: 2px solid black;
-        }
+          border-left: 10px solid black;
+          // background-color: black;
       }
       span {
-        // width: 100%;
         &:nth-child(1) {
           justify-self: start;
         }
@@ -41,25 +78,16 @@
         }
       }
     }
-    /* ul {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      padding: none;
-      margin: none;
-      b {
-        padding: none;
-      margin: none;
-      
-      }
+    ul {
+      display: grid;
+      grid-template-rows: repeat(10, 1fr);
+      width: 300px;
+      // height: 400px;
+      align-self: start;
       li {
-        
-      }
-    } */
-
-   /*  &:nth-child(3) {
-      // width: 80%;
-
-    } */
+        font-size: 40px;
+        text-align: center;
+      } 
+    }
   }
 }

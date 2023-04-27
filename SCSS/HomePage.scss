@@ -1,9 +1,9 @@
 @import "Variables";
 
 .container {
-  background-color: $backgroundColor;
   align-items: center;
 }
+
 
 .hero {
   display: grid;
@@ -25,6 +25,7 @@
   a {
     text-decoration: none;
     transition: $transitionTime;
+    text-shadow: 3px 2px $secondaryColor;
   }
 }
 

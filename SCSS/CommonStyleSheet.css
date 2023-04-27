@@ -1,14 +1,27 @@
 body {
+  width: 100%;
+  height: 100%;
   margin: 0px;
   font-family: "Space Mono", monospace;
   color: white;
+  background-image: url(../Images/Background\ Image.png);
+  background-repeat: repeat;
+  background-size: 100vw;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
 }
 
 .container {
   display: grid;
   height: 100%;
   min-height: 100vh;
-  background-color: #1F1F1F;
+}
+
+.hoverGlow {
+  transition: 1s;
+}
+.hoverGlow:hover {
+  box-shadow: inset 0 0 15px 1px #bebebe, 0 0 10px 3px #33dddd;
 }
 
 nav {
@@ -25,12 +38,16 @@ nav ul {
 }
 nav ul:hover .active:not(:hover) {
   opacity: 0.4;
+  text-shadow: 1px 1px white;
 }
 nav ul .inactive {
   opacity: 0.4;
+  text-shadow: 1px 1px white;
 }
 nav ul .inactive:hover {
+  color: black;
   opacity: 1;
+  text-shadow: 3px 2px white;
 }
 nav ul li {
   display: grid;
@@ -45,8 +62,9 @@ nav ul li a {
   width: fit-content;
   justify-self: center;
   font-weight: 400;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 70px;
+  text-shadow: 3px 2px white;
 }
 
 footer {
@@ -60,11 +78,10 @@ footer {
 footer ul {
   list-style-type: none;
 }
-footer ul a {
+footer a {
   color: #dbdbdb;
-  text-decoration: none;
 }
-footer ul a:hover {
+footer a:hover {
   color: white;
 }
 footer #icons {

@@ -19,10 +19,6 @@
     font-size: 25px;
     padding: 20px;
     border-radius: 10px;
-    transition: calc($transitionTime * 2.5);
-    &:hover {
-      box-shadow: inset 0 0 20px 1px $accentWhite, 0 0 20px 7px $accentPurple;
-    }
   }
 }
 
@@ -41,19 +37,19 @@
     opacity: 1;
     // transition: $transitionTime;
     &:nth-child(odd) {
-      transform: translateX(0);
-      box-shadow: 10px 10px 10px $accentWhite, 20px 20px 20px $accentPurple;
+      transform: translateX(15px);
+      box-shadow: 10px 10px 10px $accentWhite, 20px 20px 20px $accentCopper;
       translate: -15px -15px;
       &:hover {
-        box-shadow: 13px 13px 13px $accentWhite, 25px 25px 25px $accentPurple;
+        box-shadow: 13px 13px 13px $accentWhite, 25px 25px 25px $accentCopper;
       }
     }
     &:nth-child(even) {
-      transform: translateX(0);
-      box-shadow: -10px 10px 10px $accentWhite, -20px 20px 20px $accentPurple;
+      transform: translateX(-15px);
+      box-shadow: -10px 10px 10px $accentWhite, -20px 20px 20px $accentCopper;
       translate: 15px -15px;
       &:hover {
-        box-shadow: -10px 10px 13px rgb(185, 185, 185), -25px 25px 20px $accentPurple;
+        box-shadow: -10px 10px 13px rgb(185, 185, 185), -25px 25px 20px $accentCopper;
       }
     }
   }
@@ -104,7 +100,23 @@
     border: 10px double  $secondaryColor;
     transition: $transitionTime;
     &:hover {
-      border: 15px double lighten($accentPurple, 30%);
+      border: 15px double lighten($accentCopper, 7%);
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .boxes {
+    img {
+      width: 90%;
+      height: auto;
+      border: none;
+      &:hover {
+        border: none;
+      }
+    }
+    &:nth-child(odd) {
+      flex-direction: column-reverse;
     }
   }
 }
