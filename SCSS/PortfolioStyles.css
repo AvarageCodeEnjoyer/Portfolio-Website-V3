@@ -34,7 +34,7 @@
   opacity: 1;
 }
 #box-wrapper .slide-in:nth-child(odd) {
-  transform: translateX(15px);
+  transform: translateX(0);
   box-shadow: 10px 10px 10px #bebebe, 20px 20px 20px #33dddd;
   translate: -15px -15px;
 }
@@ -42,7 +42,7 @@
   box-shadow: 13px 13px 13px #bebebe, 25px 25px 25px #33dddd;
 }
 #box-wrapper .slide-in:nth-child(even) {
-  transform: translateX(-15px);
+  transform: translateX(0);
   box-shadow: -10px 10px 10px #bebebe, -20px 20px 20px #33dddd;
   translate: 15px -15px;
 }

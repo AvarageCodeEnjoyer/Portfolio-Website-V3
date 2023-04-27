@@ -37,7 +37,7 @@
     opacity: 1;
     // transition: $transitionTime;
     &:nth-child(odd) {
-      transform: translateX(15px);
+      transform: translateX(0);
       box-shadow: 10px 10px 10px $accentWhite, 20px 20px 20px $accentCopper;
       translate: -15px -15px;
       &:hover {
@@ -45,7 +45,7 @@
       }
     }
     &:nth-child(even) {
-      transform: translateX(-15px);
+      transform: translateX(0);
       box-shadow: -10px 10px 10px $accentWhite, -20px 20px 20px $accentCopper;
       translate: 15px -15px;
       &:hover {
