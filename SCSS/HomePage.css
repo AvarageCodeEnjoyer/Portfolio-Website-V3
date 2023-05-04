@@ -28,11 +28,14 @@
 }
 
 .word {
-  transition: 0.4s;
+  transition: 0.4s ease;
   opacity: 1;
 }
 .word:not(:hover) {
   color: white;
+}
+.word:hover {
+  letter-spacing: 4px;
 }
 
 p {
