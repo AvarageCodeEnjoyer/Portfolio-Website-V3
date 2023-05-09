@@ -9,7 +9,7 @@ body {
   background-image: url(../Images/Background_Image.png); 
   background-repeat: repeat; 
   background-size: 100vw; 
-  backdrop-filter: grayscale(100%) sepia(40%);
+  backdrop-filter: hue-rotate(40deg);
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
 .hoverGlow {
   transition: calc($transitionTime * 2.5);
   &:hover {
-    box-shadow: inset 0 0 15px 1px $accentWhite, 0 0 10px 3px $accentCopper;
+    box-shadow: inset 0 0 15px 1px $accentWhite, 0 0 10px 3px $accentBlue;
   }
 }
 
@@ -79,8 +79,11 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  background-color: #111111;
+  background-color: #3a7f7c;
   color: #dbdbdb;
+  > div {
+    color: white
+  }
   ul {
     list-style-type: none;
   }

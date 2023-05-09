@@ -2,6 +2,7 @@
   display: grid;
   justify-content: center;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 /* ---------------- First text thats displayed on the screen ---------------- */
@@ -11,20 +12,23 @@
   width: 75%;
 }
 .intro p {
+  box-shadow: inset 0 0 15px 1px #bebebe, 0 0 15px 7px #33dddd;
   margin: 20px;
   justify-self: center;
   background-color: #2D2D2D;
   font-size: 25px;
   padding: 20px;
   border-radius: 10px;
+  animation: border;
 }
 
 /* ------------ Div that wraps all the boxes with images and text ----------- */
 #box-wrapper {
   display: grid;
   justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
-  gap: 20px;
+  row-gap: 120px;
 }
 #box-wrapper .active {
   opacity: 1;
@@ -54,49 +58,44 @@
 .boxes {
   display: flex;
   justify-self: center;
-  width: 50%;
+  position: relative;
   box-sizing: border-box;
   background-color: #2D2D2D;
   padding: 20px;
   border-radius: 10px;
-  margin: 50px 50px;
   transition: 1s;
-  opacity: 0;
 }
 .boxes a {
   color: #bebebe;
   transition: 0.4s;
 }
-.boxes a:hover {
-  color: white;
+.boxes:hover h1 {
+  opacity: 1;
 }
-.boxes .textBox {
-  display: grid;
-  justify-content: center;
+.boxes:hover img {
+  filter: brightness(0.7);
+  border: 15px double white;
+  box-shadow: 0px 0px 15px 5px rgb(73, 226, 226);
 }
-.boxes .textBox h1 {
-  text-align: center;
-}
-.boxes:nth-child(odd) {
-  transform: translateX(100%);
-}
-.boxes:nth-child(even) {
-  transform: translateX(-100%);
-}
-.boxes p {
-  padding: 20px;
-  font-size: 23px;
+.boxes h1 {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 0px;
+  white-space: nowrap;
 }
 .boxes img {
   box-sizing: border-box;
   border-radius: 10px;
-  width: 350px;
-  height: 350px;
+  width: 340px;
+  height: 340px;
   border: 10px double #2D2D2D;
   transition: 0.4s;
-}
-.boxes img:hover {
-  border: 15px double #52e2e2;
 }
 
 @media screen and (max-width: 775px) {

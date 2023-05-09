@@ -7,8 +7,8 @@ body {
   background-image: url(../Images/Background_Image.png);
   background-repeat: repeat;
   background-size: 100vw;
-  -webkit-backdrop-filter: grayscale(100%) sepia(40%);
-          backdrop-filter: grayscale(100%) sepia(40%);
+  -webkit-backdrop-filter: hue-rotate(40deg);
+          backdrop-filter: hue-rotate(40deg);
 }
 
 .container {
@@ -79,8 +79,11 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  background-color: #111111;
+  background-color: #3a7f7c;
   color: #dbdbdb;
+}
+footer > div {
+  color: white;
 }
 footer ul {
   list-style-type: none;

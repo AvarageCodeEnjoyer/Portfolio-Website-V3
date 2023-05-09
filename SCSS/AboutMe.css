@@ -23,6 +23,10 @@ canvas {
   justify-self: center;
   border-radius: 10px;
   margin-bottom: 100px;
+  font-size: 25px;
+}
+.aboutMeContainer > div > p {
+  font-size: 30px;
 }
 .aboutMeContainer .monologue, .aboutMeContainer .insideAboutMe {
   display: grid;
@@ -36,17 +40,29 @@ canvas {
 }
 .aboutMeContainer .monologue h2, .aboutMeContainer .insideAboutMe h2 {
   justify-self: center;
+  margin: 0px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .aboutMeContainer .monologue {
   grid-template-columns: auto 1fr;
   grid-area: 1/1/2/3;
   width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
   justify-self: center;
-  font-size: 25px;
   padding: 20px;
 }
+.aboutMeContainer .monologue > div {
+  display: grid;
+  justify-items: center;
+  align-content: space-around;
+}
+.aboutMeContainer .monologue > div > p {
+  margin: 0px;
+}
 .aboutMeContainer .monologue img {
-  width: 400px;
+  width: 300px;
 }
 .aboutMeContainer .monologue p {
   width: 90%;
@@ -66,9 +82,6 @@ canvas {
   width: 100%;
   box-sizing: border-box;
   border: 10px solid #2D2D2D;
-}
-.aboutMeContainer .insideAboutMe h3:hover {
-  border-left: 10px solid black;
 }
 .aboutMeContainer .insideAboutMe h3 span:nth-child(1) {
   justify-self: start;
