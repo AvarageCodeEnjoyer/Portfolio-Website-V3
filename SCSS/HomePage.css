@@ -4,6 +4,7 @@
 
 .hero {
   display: grid;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 300px;

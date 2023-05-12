@@ -12,7 +12,8 @@
 .intro {
   display: grid;
   justify-self: center;
-  width: 75%;
+  width: 50%;
+  margin: 50px auto 250px;
   p {
     box-shadow: inset 0 0 15px 1px $accentWhite, 0 0 15px 7px $accentBlue;
     margin: 20px;
@@ -33,30 +34,6 @@
   grid-template-columns: repeat(3, 1fr);
   position: relative;
   row-gap: 120px;
-  .active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .slide-in { 
-    opacity: 1;
-    // transition: $transitionTime;
-    &:nth-child(odd) {
-      transform: translateX(0);
-      box-shadow: 10px 10px 10px $accentWhite, 20px 20px 20px $accentBlue;
-      translate: -15px -15px;
-      &:hover {
-        box-shadow: 13px 13px 13px $accentWhite, 25px 25px 25px $accentBlue;
-      }
-    }
-    &:nth-child(even) {
-      transform: translateX(0);
-      box-shadow: -10px 10px 10px $accentWhite, -20px 20px 20px $accentBlue;
-      translate: 15px -15px;
-      &:hover {
-        box-shadow: -10px 10px 13px rgb(185, 185, 185), -25px 25px 20px $accentBlue;
-      }
-    }
-  }
 }
 
 /* ---------- Styles for all the boxes that contain images and text --------- */
@@ -79,8 +56,10 @@
   }
   &:hover img {
     filter: brightness(0.7);
-    border: 15px double lighten(rgb(255, 255, 255), 7%);
+    border: 15px double white;
     box-shadow: 0px 0px 15px 5px rgb(73, 226, 226);
+    border-radius: 20px;
+    // padding: 5px;
   }
   h1 {
     position: absolute;
@@ -98,12 +77,20 @@
     border-radius: 10px;
     width: 340px;
     height: 340px;
-    border: 10px double  $secondaryColor;
+    border: 10px double $secondaryColor;
     transition: $transitionTime;
   }
 }
 
+/* -------------------- Styles for screen responsiveness -------------------- */
+
 @media screen and (max-width: 775px) {
+  #box-wrapper {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(21, auto);
+    width: 66%;
+    justify-self: center;
+  }
   .boxes {
     img {
       width: 90%;

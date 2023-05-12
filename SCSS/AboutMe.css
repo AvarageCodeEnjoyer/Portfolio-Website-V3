@@ -1,3 +1,11 @@
+@-webkit-keyframes border {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: inset 0 0 15px 1px #bebebe, 0 0 15px 7px #33dddd;
+  }
+}
 @keyframes border {
   from {
     box-shadow: none;
@@ -33,7 +41,8 @@ canvas {
   justify-self: center;
   justify-content: center;
   transition: 1s;
-  animation: border 1s ease-in 1 forwards;
+  -webkit-animation: border 1s ease-in 1 forwards;
+          animation: border 1s ease-in 1 forwards;
 }
 .aboutMeContainer .monologue:hover, .aboutMeContainer .insideAboutMe:hover {
   box-shadow: inset 0 0 20px 1px #bebebe, 0 0 20px 7px #33dddd;
@@ -41,6 +50,7 @@ canvas {
 .aboutMeContainer .monologue h2, .aboutMeContainer .insideAboutMe h2 {
   justify-self: center;
   margin: 0px;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -48,6 +58,7 @@ canvas {
   grid-template-columns: auto 1fr;
   grid-area: 1/1/2/3;
   width: 80%;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   justify-self: center;
@@ -62,7 +73,7 @@ canvas {
   margin: 0px;
 }
 .aboutMeContainer .monologue img {
-  width: 300px;
+  width: 290px;
 }
 .aboutMeContainer .monologue p {
   width: 90%;
@@ -73,7 +84,7 @@ canvas {
   width: 75%;
   height: 700px;
   font-size: 30px;
-  grid-template-rows: repeat(6, 100px);
+  grid-template-rows: repeat(6, 110px);
 }
 .aboutMeContainer .insideAboutMe h3 {
   display: grid;
@@ -93,6 +104,7 @@ canvas {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   width: 300px;
+  padding: 0px;
   align-self: start;
 }
 .aboutMeContainer .insideAboutMe ul li {
