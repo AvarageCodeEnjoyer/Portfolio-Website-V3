@@ -1,16 +1,20 @@
 @import "Variables";
 
 .container {
-  align-items: center;
+  align-content: space-evenly;
+}
+
+h2 {
+  margin-top: 0px;
 }
 
 
 .hero {
   display: grid;
   width: fit-content;
-  height: 300px;
+  height: 200px;
   justify-self: center;
-  align-items: space-between;
+  align-content: space-between;
   color: white;
   font-size: 60px;
   &:hover .word:not(:hover) {

@@ -9,8 +9,7 @@
 .intro {
   display: grid;
   justify-self: center;
-  width: 50%;
-  margin: 50px auto 250px;
+  width: 75%;
 }
 .intro p {
   box-shadow: inset 0 0 15px 1px #bebebe, 0 0 15px 7px #33dddd;
